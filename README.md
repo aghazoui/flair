@@ -58,8 +58,8 @@ for entity in sentence.get_spans('ner'):
 
 This yields the following output:
 ```
-Span [1,2]: "George Washington"   [− Labels: PER (0.9968)]
-Span [5]: "Washington"   [− Labels: LOC (0.9994)]
+Span [1,2]: "George Washington"   [− Labels: PER (0.9515)]
+Span [5]: "Washington"   [− Labels: LOC (0.992)]
 ```
 
 So, the entities "*George Washington*" (labeled as a **person**) and "*Washington*" (labeled as a **location**) are found in the sentence "*George Washington went to Washington*". 
@@ -92,10 +92,10 @@ embedding_types = [
     WordEmbeddings('glove'),
 
     # contextual string embeddings, forward
-    FlairEmbeddings('news-forward'),
+    FlairEmbeddings('news-forward-fast'),
 
     # contextual string embeddings, backward
-    FlairEmbeddings('news-backward'),
+    FlairEmbeddings('news-backward-fast'),
 ]
 
 # embedding stack consists of Flair and GloVe embeddings
