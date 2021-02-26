@@ -6,7 +6,8 @@ tags:
 language: en
 datasets:
 - conll2003
-inference: false
+widget:
+- text: "George Washington went to Washington"
 ---
 
 ## English NER in Flair (fast model)
